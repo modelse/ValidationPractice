@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+@model validationPractice.Models.User
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/site.css" rel="stylesheet">
+    </head>
+    <body>
+    <h1>Enter your information</h1>
+    <div>
+        
+   
+    <form asp-controller="Home" asp-action="Register" method="post">
+        <div>
+        <label asp-for="first"></label>
+        <input asp-for="first"/>
+        <span asp-validation-for="first"></span>
+        </div>
+        <div>
+        <label asp-for="last"></label>
+        <input asp-for="last"/>
+        <span asp-validation-for="last"></span>
+        </div>
+        <div>
+        <label asp-for="age"></label>
+        <input asp-for="age"/>
+        <span asp-validation-for="age"></span>
+        </div>
+        <div>
+        <label asp-for="email"></label>
+        <input asp-for="email"/>
+        <span asp-validation-for="email"></span>
+        </div>
+        <div>
+        <label asp-for="password"></label>
+        <input asp-for="password"/>
+        <span asp-validation-for="password"></span>
+        </div>
+        <button type="submit">Create new User</button>
+    </form>
+    </body>
+</html>
